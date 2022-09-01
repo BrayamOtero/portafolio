@@ -9,6 +9,9 @@ nav {
   display: block;
   padding-left: 50px;
   padding-right: 50px;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
 }
 
 .logo a {
