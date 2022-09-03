@@ -2,6 +2,9 @@ import React from "react";
 import "./aboutme.css"
 import CardAbout from "./cardinfo";
 import CV from "../../assets/cv.pdf"
+import { RiLinkedinBoxLine } from 'react-icons/ri'
+import { VscGithub } from 'react-icons/vsc'
+
 
 const Aboutme = () => {
     return (
@@ -17,11 +20,14 @@ const Aboutme = () => {
                         description="1+ year working." />
                     <CardAbout
                         title="Projects"
-                        description="10+ completed projects." />  
+                        description="10+ completed projects." />
                     <div className="about_btn">
                         <a href={CV} className="btn_cv_dl">Download Resume</a>
                     </div>
-                    
+                    <div className="social_zone">                        
+                        <a href='https://github.com/BrayamOtero' className="icon_social"> <VscGithub  size={30} /> </a> 
+                        <a href='https://www.linkedin.com/in/brayam-david-otero-pomeo-bb6590114/'  className="icon_social"> <RiLinkedinBoxLine  size={30} /> </a>                        
+                    </div>
                 </div>
             </div>
         </section>
