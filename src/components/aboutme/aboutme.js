@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./aboutme.css"
 import CardAbout from "./cardinfo";
 import CV from "../../assets/cv.pdf"
@@ -7,6 +7,9 @@ import { VscGithub } from 'react-icons/vsc'
 import CardSkill from "./cardSkill";
 
 const Aboutme = () => {
+    const [showMore, setShowMore] = useState(false);
+    const onClick = () => setShowMore(!showMore)
+
     return (
         <section id="aboutme" className="aboutme">
             <h1 className="about_title"> About Me</h1>
@@ -39,9 +42,9 @@ const Aboutme = () => {
                 <div className="skills_language">
                     <CardSkill content={
                             [
-                                { name: 'Java', per: '80' },
-                                { name: 'Javascript', per: '50' },
-                                { name: 'Python', per: '50' },
+                                { name: 'Java', per: '85' },
+                                { name: 'Python', per: '70' },
+                                { name: 'Javascript', per: '50' },                                
                                 { name: 'Kotlin', per: '25' },
                             ]
                         }
@@ -53,10 +56,10 @@ const Aboutme = () => {
                             [
                                 { name: 'SpringBoot', per: '80' },
                                 { name: 'JavaEE', per: '80' },
-                                { name: 'React', per: '50' },
+                                { name: 'React', per: '60' },
                                 { name: 'Angular', per: '50' },
-                                { name: 'PrimeFaces', per: '30' },
-                                { name: 'Thymeleaf', per: '30' },
+                                { name: 'PrimeFaces', per: '50' },
+                                { name: 'Thymeleaf', per: '40' },
                             ]
                         }
                         title='Frameworks/Libraries' />                    
@@ -67,30 +70,32 @@ const Aboutme = () => {
                                 { name: 'SQL Server', per: '80' },
                                 { name: 'MySQL', per: '70' },
                                 { name: 'PostgreSQL', per: '70' },
-                                { name: 'MongoDB', per: '50' },
+                                { name: 'MongoDB', per: '60' },
                             ]
                         }
                         title='Data Bases' />                     
-                </div>
-                <div className="skills_deploy">                    
-                    <CardSkill content={
-                        [
+                </div>                
+                {showMore ? 
+                <><div className="skills_deploy">
+                        <CardSkill content={[
                             { name: 'IIS', per: '80' },
                             { name: 'Heroku', per: '50' },
-                            { name: 'Google Cloud', per: '50' },                                
-                        ]
-                    }
-                    title='Deploy Envioremnt' />                        
-                    
-                </div>
-                <div className="skills_testing">
-                    <CardSkill content={
-                        [
-                            { name: 'JMeter', per: '80' },
-                            { name: 'JUnit', per: '50' },                                                           
-                        ]
-                    }
-                    title='Testing/Performance' />                      
+                            { name: 'Google Cloud', per: '50' },
+                            { name: 'Wildfly', per: '70' },
+                            { name: 'Tomcat', per: '50' },
+                        ]}
+                            title='Deploy Envioremnt/Server' />
+
+                    </div><div className="skills_testing">
+                            <CardSkill content={[
+                                { name: 'JMeter', per: '80' },
+                                { name: 'JUnit', per: '50' },
+                            ]}
+                                title='Testing/Performance' />
+                        </div></>
+                : null}
+                <div className="skills_see_more">
+                    <button className="btn_see_more" onClick={onClick}>{showMore ? "Show Less" : "Show More"}</button>
                 </div>
             </div>
         </section>
