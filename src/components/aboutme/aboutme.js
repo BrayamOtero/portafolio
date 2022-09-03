@@ -4,7 +4,7 @@ import CardAbout from "./cardinfo";
 import CV from "../../assets/cv.pdf"
 import { RiLinkedinBoxLine } from 'react-icons/ri'
 import { VscGithub } from 'react-icons/vsc'
-
+import CardSkill from "./cardSkill";
 
 const Aboutme = () => {
     return (
@@ -16,9 +16,9 @@ const Aboutme = () => {
                 </div>
                 <div className="about_card_space">
                     <div className="card_expirience">
-                        <CardAbout                        
+                        <CardAbout
                             title="Expirience"
-                            description="1+ year working." />                        
+                            description="1+ year working." />
                     </div>
                     <div className="card_projects">
                         <CardAbout
@@ -28,10 +28,69 @@ const Aboutme = () => {
                     <div className="about_btn">
                         <a href={CV} className="btn_cv_dl">Download Resume</a>
                     </div>
-                    <div className="social_zone">                        
-                        <a href='https://github.com/BrayamOtero' className="icon_social"> <VscGithub  size={30} /> </a> 
-                        <a href='https://www.linkedin.com/in/brayam-david-otero-pomeo-bb6590114/'  className="icon_social"> <RiLinkedinBoxLine  size={30} /> </a>                        
+                    <div className="social_zone">
+                        <a href='https://github.com/BrayamOtero' className="icon_social"> <VscGithub size={30} /> </a>
+                        <a href='https://www.linkedin.com/in/brayam-david-otero-pomeo-bb6590114/' className="icon_social"> <RiLinkedinBoxLine size={30} /> </a>
                     </div>
+                </div>
+            </div>
+            <h1>My Skills</h1>
+            <div className="skills_main">
+                <div className="skills_language">
+                    <CardSkill content={
+                            [
+                                { name: 'Java', per: '80' },
+                                { name: 'Javascript', per: '50' },
+                                { name: 'Python', per: '50' },
+                                { name: 'Kotlin', per: '25' },
+                            ]
+                        }
+                        title='Programming Languages' />
+                </div>
+
+                <div className="skills_frameworks">
+                    <CardSkill content={
+                            [
+                                { name: 'SpringBoot', per: '80' },
+                                { name: 'JavaEE', per: '80' },
+                                { name: 'React', per: '50' },
+                                { name: 'Angular', per: '50' },
+                                { name: 'PrimeFaces', per: '30' },
+                                { name: 'Thymeleaf', per: '30' },
+                            ]
+                        }
+                        title='Frameworks/Libraries' />                    
+                </div>
+                <div className="skills_db">
+                    <CardSkill content={
+                            [
+                                { name: 'SQL Server', per: '80' },
+                                { name: 'MySQL', per: '70' },
+                                { name: 'PostgreSQL', per: '70' },
+                                { name: 'MongoDB', per: '50' },
+                            ]
+                        }
+                        title='Data Bases' />                     
+                </div>
+                <div className="skills_deploy">                    
+                    <CardSkill content={
+                        [
+                            { name: 'IIS', per: '80' },
+                            { name: 'Heroku', per: '50' },
+                            { name: 'Google Cloud', per: '50' },                                
+                        ]
+                    }
+                    title='Deploy Envioremnt' />                        
+                    
+                </div>
+                <div className="skills_testing">
+                    <CardSkill content={
+                        [
+                            { name: 'JMeter', per: '80' },
+                            { name: 'JUnit', per: '50' },                                                           
+                        ]
+                    }
+                    title='Testing/Performance' />                      
                 </div>
             </div>
         </section>
