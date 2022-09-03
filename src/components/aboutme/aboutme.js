@@ -8,7 +8,7 @@ import { VscGithub } from 'react-icons/vsc'
 
 const Aboutme = () => {
     return (
-        <section className="aboutme">
+        <section id="aboutme" className="aboutme">
             <h1 className="about_title"> About Me</h1>
             <div className="about_main">
                 <div className="about_description">

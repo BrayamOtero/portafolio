@@ -5,7 +5,7 @@ import PHOTO from "../../assets/images/p1.jpeg"
 const Header = () => {
     return (
         <header>
-            <div className="container header__container">
+            <div id="home" className="container header__container">
                 <div className="info__header">
                     <h4>Hi I'm</h4>
                     <h1>Brayam Otero</h1>

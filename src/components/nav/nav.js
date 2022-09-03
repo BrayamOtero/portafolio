@@ -4,12 +4,12 @@ import "./nav.css"
 const Navbar = () => (
     <nav>
         <div className="logo">
-            <a href="#">Home</a>
+            <a href="#home">Home</a>
         </div>
         <ul>            
-            <li><a href="#">Portafolio</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="/#aboutme">Portafolio</a></li>
+            <li><a href="/#aboutme">Contact</a></li>
+            <li><a href="/#aboutme">About</a></li>
         </ul>
     </nav>
 )
