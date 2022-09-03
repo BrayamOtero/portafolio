@@ -10,7 +10,7 @@ const Header = () => {
                     <h4>Hi I'm</h4>
                     <h1>Brayam Otero</h1>
                     <h3>Full Stack Developer focused on JAVA Backend</h3>
-                    <h5 className="info__brief">I have developed <u>high performance</u> web and mobile applications.</h5>
+                    <p className="info__brief">I have developed <u>high performance</u> web and mobile applications.</p>
                 </div>
                 <div className="me">
                     <img src={PHOTO} alt="me" />
