@@ -25,6 +25,7 @@
 
 .about_description>p {
     width: 100%;
+    text-align: justify;
 }
 
 .about_card_space {
