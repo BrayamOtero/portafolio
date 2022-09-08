@@ -3,11 +3,11 @@
     padding-top: 80px;
     text-align: center;
     font-size: 20px;
-    background: rgb(23, 30, 38);
+    /*background: rgb(23, 30, 38);
     background: linear-gradient(180deg,
             rgba(23, 30, 38, 1) 0%,
             rgba(9, 9, 46, 1) 50%,
-            rgba(35, 130, 149, 1) 100%);    
+            rgba(35, 130, 149, 1) 100%);    */
 }
 
 .about_main {
@@ -44,11 +44,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(22, 22, 69);
+    background: #1E5F74;
+    /*background: rgb(22, 22, 69);
     background: linear-gradient(180deg,
             rgb(24, 24, 95) 0%,
             rgba(6, 37, 71, 1) 60%,
-            rgba(63, 101, 108, 1) 100%);
+            rgba(63, 101, 108, 1) 100%);*/
 }
 
 .about_card:hover, .about_btn > a:hover, .icon_social:hover, .btn_see_more:hover {      
@@ -101,11 +102,11 @@
     gap: 20px;
 }
 .skills_card{
-    border: 1px solid #ffff;
     width: 300px;
     display: flex;
     flex-direction: column;
     border-radius: 20px;
+    background-color: #1E5F74;
 }
 
 .skills_card * {
@@ -138,7 +139,7 @@
     align-self: flex-start;
 }
 .bar {
-    background-color: aqua;
+    background-color: #133B5C;
     display: block;
     width: 200px;    
     height: 15px;

@@ -4,7 +4,10 @@
   padding: 0;
   text-decoration: none;
 }
-
+html {
+  background-color: #133B5C;
+  color: #FCDAB7;
+}
 
 .App {
   text-align: center;
